@@ -1,0 +1,67 @@
+body {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: 1px solid #000000;
+    margin: 400px;
+}
+
+.mainFunc {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#numButtons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 10px; 
+}
+
+#numButtons .num {
+    flex: 0 0 calc(33.333% - 10px); 
+    box-sizing: border-box;
+    padding: 35px;
+    font-size: 1.2rem;
+}
+
+.operator {
+    padding: 20px;
+    margin: 5px;
+}
+#operator {
+    padding: 10px;
+}
+#res {
+    padding: 20px;
+}
+
+#clear, #equals {
+    padding: 20px;
+}
+
+#number-display {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#number-display input {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#input1, #input2 {
+    width: 100%;
+    margin: 10px 0;
+}
+
+$
