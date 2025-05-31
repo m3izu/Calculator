@@ -8,10 +8,29 @@ let activeInput = input1;
 
 
 
-document.getElementById('addition').addEventListener('click', () => opeInput.value = '+');
-document.getElementById('subtraction').addEventListener('click', () => opeInput.value = '-');
-document.getElementById('multiplication').addEventListener('click', () => opeInput.value = '*');
-document.getElementById('division').addEventListener('click', () => opeInput.value = '/');
+document.getElementById('addition').addEventListener('click', () => {
+    opeInput.value = '+';
+    input2.focus();
+    activeInput = input2;
+});
+document.getElementById('subtraction').addEventListener('click', () => {
+    opeInput.value = '-';
+    input2.focus();
+    activeInput = input2;
+});
+
+document.getElementById('multiplication').addEventListener('click', () => {
+    opeInput.value = '*';
+    input2.focus();
+    activeInput = input2;
+});
+
+document.getElementById('division').addEventListener('click', () => {
+    opeInput.value = '/';
+    input2.focus();
+    activeInput = input2;
+});
+
 
 document.getElementById("numButtons").addEventListener("click", function(event) {
     if (event.target.matches("button.num")) {
@@ -57,7 +76,9 @@ function operate() {
     opeInput.value = '';
     input1.value = result;
     activeInput = input1; 
-}
+};
+
+
 
 
 console.log(equals.addEventListener('click', operate));
@@ -65,4 +86,10 @@ clear.addEventListener('click', () => {
     input1.value = '';
     input2.value = '';
     opeInput.value = '';
+});
+
+document.getElementById('op').addEventListener('input', (kol) => {
+    if (kol.target.value.length > 0) {
+        document.getElementById('input2').focus();
+    }
 });
