@@ -6,6 +6,10 @@ body {
     flex-direction: column;
     border: 1px solid #000000;
     margin: 400px;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .mainFunc {
@@ -64,4 +68,37 @@ body {
     margin: 10px 0;
 }
 
-$
+#input1, #input2, #op {
+    border: 0;
+    font-size: x-large;
+    background-color: pink;
+}
+
+#input1 {
+    border-radius: 10px 0 0 10px;
+}
+
+#input2 {
+    border-radius: 0 10px 10px 0;
+}
+
+#op {
+    width: 50px;
+    text-align: center;
+    font-size: 2rem;
+    background-color: pink;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#mute {
+    border-radius: 100px;
+}

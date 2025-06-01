@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Web Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png" type="image/png">
 </head>
 <body>
     <div id="number-display">
-        <input type="number" id="input1" placeholder="First Number">
-        <input type="text" id="op" placeholder="Operator" maxlength="1" readonly>
-        <input type="number" id="input2" placeholder="Second Number">
+        <input type="number" id="input1" placeholder=" ">
+        <input type="text" id="op" placeholder=" " maxlength="1" readonly>
+        <input type="number" id="input2" placeholder=" ">
     </div>
         <div class="mainFunc">
             <div id ="operator">
@@ -38,6 +39,30 @@
                 <button id="equals">=</button>
         </div>
     </div>
+    <div id="credits">
+        <p>Made by m3izu, a simple web calculator.</p>
+        <p>i hope future me sees this and be proud of what i have achieved. </p>
+        
+    </div>
     <script src="script.js"></script>
+    <audio autoplay loop id="music">
+        <source  src="kirby_theme.mp3" type="audio/mpeg">
+    </audio>
+    <button id="mute">Mute</button>
+    
+    <script>
+        document.getElementById('mute').addEventListener('click', () => {
+    const audio = document.getElementById('music');
+    if (audio.muted) {
+        audio.muted = false;
+        document.getElementById('mute').textContent = 'Mute';
+        console.log('Unmuted');
+    } else {
+        audio.muted = true;
+        document.getElementById('mute').textContent = 'Unmute';
+        console.log('Muted');
+    }
+});
+    </script>
 </body>
 </html>

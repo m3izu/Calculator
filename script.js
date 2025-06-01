@@ -93,3 +93,4 @@ document.getElementById('op').addEventListener('input', (kol) => {
         document.getElementById('input2').focus();
     }
 });
+
